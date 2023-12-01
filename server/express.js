@@ -21,6 +21,7 @@ import devBundle from './devBundle';
 import authRoutes from './routes/auth.routes';
 import userRoutes from './routes/user.routes';
 import departmentRoutes from './routes/department.routes';
+import cityRoutes from './routes/city.routes';
 
 import Template from './../template';
 
@@ -40,6 +41,7 @@ app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')));
 app.use('/', authRoutes);
 app.use('/', userRoutes);
 app.use('/', departmentRoutes);
+app.use('/', cityRoutes);
 
 app.get('*', (req, res) => {
   const sheets = new ServerStyleSheets();

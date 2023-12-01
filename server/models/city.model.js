@@ -7,10 +7,7 @@ const CitySchema = new mongoose.Schema([{
         required: 'City is required'
     },
 
-    department: {
-        type: mongoose.Schema.ObjectId,
-        ref:'Department'
-    },
+    department: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Department' }],
 }]);
 
 export default mongoose.model('City', CitySchema);
